@@ -1,3 +1,38 @@
+#container > div {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, auto);
+    gap: 20px;
+}
+
+@media (max-width: 1024px) {
+    #container > div {
+        grid-template-columns: repeat(2, auto);
+    }
+}
+
+@media (max-width: 600px) {
+    #container > div {
+        grid-template-columns: 1fr;
+    }
+
+    .toggle-container {
+        flex-direction: column;
+        width: 90%;
+        margin-left: 0;
+        height: auto;
+        padding: 15px;
+    }
+
+    select {
+        width: 90%;
+    }
+
+    #date, #food, #calory {
+        width: 100%;
+    }
+}
+
 .top-bar {
     display: flex;
     align-items: center;
@@ -75,7 +110,7 @@ select {
     border-left: 2px black solid;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    background-color: #FFFBEB;   /* akşam yemeği   background-color: #EFF6FF; */
+    background-color: #FFFBEB;
 }
 #date-cnt {
     font-family: Verdana;
