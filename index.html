@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="=en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>KYK Yemek</title>
+        <link rel="stylesheet" href="style.css">        
+    </head>
+    <body>
+        <div class="top-bar">
+            <div class="toggle-container">
+                <span>Kahvaltı</span>
+                <label class="switch">
+                    <input type="checkbox" id="mealToggle" aria-label="Öğün seçimi">
+                    <span class="slider round"></span>
+                </label>
+                <span>Akşam Yemeği</span>
+            </div>
+            <select style="margin:10px; padding:5px;" title="Yurt Seçimi">
+                <option value="option1">İstanbul</option>
+            </select>
+        </div>
+        <div id="container">
+            <div id="date"><p id="date-cnt"></p></div>
+            <div id="food"><p id="food-cnt"></p></div>
+            <div id="calory"><p id="calory-cnt"></p></div>
+        </div>
+    </body>
+    <script src="script.js"></script>
+</html>

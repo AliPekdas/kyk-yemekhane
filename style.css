@@ -1,0 +1,119 @@
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+    background-color: #f5eded;
+    border: 1px black solid;
+    border-radius: 8px;
+    width: 300px;
+    height: 60px;
+    padding: 10px 20px;
+    margin-left: 120px;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+}
+.slider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ccc;
+    transition: 0.3s;
+    border-radius: 34px;
+    cursor: pointer;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 50%;
+}
+input:checked + .slider {
+    background-color: #2196F3;
+}
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
+
+select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+#date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 350px;
+    height: 50px;
+    border-top: 2px black solid;
+    border-right: 2px black solid;
+    border-left: 2px black solid;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #FFFBEB;   /* akşam yemeği   background-color: #EFF6FF; */
+}
+#date-cnt {
+    font-family: Verdana;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#food {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 350px;
+    border: 2px black solid;
+}
+#food-cnt {
+    font-family: 'Segoe UI';
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#calory {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 50px;
+    border-bottom: 2px black solid;
+    border-right: 2px black solid;
+    border-left: 2px black solid;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #FFFBEB;
+}
+#calory-cnt {
+    font-family: Verdana;
+    font-size: 16px;
+    font-weight: bold;
+}
