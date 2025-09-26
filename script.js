@@ -44,10 +44,22 @@ function renderGrid(selectedMeal) {
     let grid = document.createElement("div");
     grid.style.display = "grid";
     grid.style.justifyContent = "center";
-    grid.style.gridTemplateColumns = "repeat(3, auto)";
+
+    if (window.innerWidth <= 1080) {
+        grid.style.gridTemplateColumns = "repeat(1, auto)";
+    } else {
+        grid.style.gridTemplateColumns = "repeat(3, auto)";
+    }
+
     grid.style.gap = "20px";
 
     let container = meals[selectedMeal];
+    
+    let todayStr = new Date().toLocaleDateString("tr-TR", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+    }); 
 
     for (let i = 0; i < container.length; i++) {
         let item = container[i];
@@ -84,13 +96,17 @@ function renderGrid(selectedMeal) {
             dateDiv.style.backgroundColor = "#EFF6FF";
             calDiv.style.backgroundColor = "#EFF6FF";
         }
+
+        if (item.date.startsWith(todayStr)) {
+            dayBox.classList.add("today");
+        }
     }
 
     mainContainer.appendChild(grid);
 }
 renderGrid("breakfast");
 
-const toggle = document.getElementById("mealToggle");
+const toggle = document.querySelector(".mealToggle");
 
 toggle.addEventListener("change", () => {
     if(toggle.checked){
