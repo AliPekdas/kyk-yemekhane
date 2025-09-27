@@ -11,3 +11,5 @@ Bu proje, KYK yurtlarının kahvaltı ve akşam yemeği menülerini görsel olar
 - **Görsel Menü Listesi:** Her günün tarihi, yemek listesi ve kalorisi ayrı kutucuklar halinde gösterilir.
 - **Dinamik HTML Oluşturma:** Menü verileri JavaScript ile dinamik olarak render edilir.
 - **Responsive Tasarım:** Flexbox ve grid kullanımı ile modern bir layout.
+
+https://kykyemekhane.com
