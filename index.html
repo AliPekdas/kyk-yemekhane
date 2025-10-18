@@ -1,34 +1,56 @@
 <!DOCTYPE html>
-<html lang="=en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>kykyemekhane.com | Güncel Yurt Yemek Listesi</title>
-        <meta name="description" content="KYK öğrencilerinin yemek menüsü ve takibi">
-        <link rel="icon" href="icon.png" type="image/png">
-        <link rel="stylesheet" href="style.css">        
-    </head>
-    <body>
-        <div class="toggle-container">
-            <span>Kahvaltı</span>
-            <label class="switch">
-                <input type="checkbox" class="mealToggle" aria-label="Öğün seçimi">
-                <span class="slider round"></span>
-            </label>
-            <span>Akşam Yemeği</span>
-        </div>
-        <select class="selection" title="İl Seçimi">
-            <option value="option1">İstanbul</option>
-        </select>
-        <div id="container">
-            <div class="date"><p class="date-cnt"></p></div>
-            <div class="food"><p class="food-cnt"></p></div>
-            <div class="calory"><p class="calory-cnt"></p></div>
-        </div>
-    </body>
-    <footer>
-        <p class="copyright">© 2025 <a href="https://kykyemekhane.com">kykyemekhane.com</a> | Tüm hakları saklıdır. | <a href="kykyemekhane.com" onclick="alert('alidoganpekdas@gmail.com'); return false;">İletişim</a>
-    </footer>
-    <script src="script.js"></script>
-</html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kykyemekhane.com | Güncel Yurt Yemek Listesi</title>
+    <meta name="description" content="KYK öğrencilerinin kaldıkları yurda göre güncel kahvaltı ve akşam yemeği menüsü.">
+    <link rel="icon" href="icon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <header>
+        <h1>KYK Yemekhane</h1>
+        <p>Güncel Kahvaltı ve Akşam Yemeği Menüleri</p>
+    </header>
+
+    <main>
+        <section class="intro-content">
+            <h2>Hoş Geldiniz!</h2>
+            <p>
+                Bu platform, Gençlik ve Spor Bakanlığı'na bağlı KYK yurtlarında kalan öğrenciler için oluşturulmuştur.
+                <br>
+                Aşağıdan şehir seçimi yaparak kaldığınız yurdun güncel yemek listesine kolayca ulaşabilirsiniz.
+            </p>
+        </section>
+
+        <div class="controls">
+            <div class="toggle-container">
+                <span>Kahvaltı</span>
+                <label class="switch">
+                    <input type="checkbox" id="mealToggle" class="mealToggle" aria-label="Öğün seçimi">
+                    <span class="slider round"></span>
+                </label>
+                <span>Akşam Yemeği</span>
+            </div>
+
+            <select id="citySelection" class="selection" title="İl Seçimi">
+                <option value="istanbul">İstanbul</option>
+                <option value="ankara">Ankara</option>
+                <option value="izmir">İzmir</option>
+            </select>
+        </div>
+
+        <div id="container">
+            <p>Lütfen menüyü görüntülemek için yukarıdan seçim yapınız.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p class="copyright">© 2025 <a href="https://kykyemekhane.com">kykyemekhane.com</a> | Tüm hakları saklıdır. | <a href="contact.html">İletişim</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
