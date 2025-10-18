@@ -1,117 +1,237 @@
-let meals = {
-    breakfast: [
-        { date: "15.09.2025 Pazartesi", food: "Patates Kızartması, Haşlanmış Yumurta, Beyaz Peynir, Siyah/Yeşil Zeytin, Mevsim Sebzeleri Söğüş, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
-        { date: "16.09.2025 Salı", food: "Peynirli Omlet, Pişi, Kaşar Peyniri, Siyah/Yeşil Zeytin, Sürülebilir Çikolata, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
-        { date: "17.09.2025 Çarşamba", food: "Karışık Pizza, Haşlanmış Yumurta, Krem Peynir, Siyah/Yeşil Zeytin, Mevsim Sebzeleri Söğüş, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
-        { date: "18.09.2025 Perşembe", food: "Menemen, Patatesli Kalem Böreği, Beyaz Peynir, Siyah/Yeşil Zeytin, Reçel Çeşitleri, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
-        { date: "19.09.2025 Cuma", food: "Peynirli Tepsi Böreği, Haşlanmış Yumurta, Kaşar Peyniri, Siyah/Yeşil Zeytin, Bal+Tereyağ, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
-        { date: "20.09.2025 Cumartesi", food: "Sucuklu Yumurta, Çikolatalı Milföy Börek, Çeçil/Örgü Peyniri, Siyah/Yeşil Zeytin, Mevsim Sebzeleri Söğüş, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
-        { date: "21.09.2025 Pazar", food: "Patates Kızartması, Haşlanmış Yumurta, Labne Peynir, Siyah/Yeşil Zeytin, Tahinli Pekmez, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
-        { date: "22.09.2025 Pazartesi", food: "Menemen, Dere Otlu Poğaça, Labne Peynir, Siyah/Yeşil Zeytin, Reçel Çeşitleri, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
-        { date: "23.09.2025 Salı", food: "Sosis Kokteyl, Haşlanmış Yumurta, Beyaz Peynir, Siyah/Yeşil Zeytin, Mevsim Sebzeleri Söğüş, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
-        { date: "24.09.2025 Çarşamba", food: "Kaşarlı Omlet, Mozaik Kek, Dil/Çeçil Peyniri, Siyah/Yeşil Zeytin, Tahinli Pekmez, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
-        { date: "25.09.2025 Perşembe", food: "Karışık Kızartma, Haşlanmış Yumurta, Beyaz Peynir, Siyah/Yeşil Zeytin, Mevsim Sebzeleri Söğüş, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
-        { date: "26.09.2025 Cuma", food: "Sade Omlet, Simit, Kaşar Peyniri, Siyah/Yeşil Zeytin, Sürülebilir Çikolata, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
-        { date: "27.09.2025 Cumartesi", food: "Patates Kızartması, Haşlanmış Yumurta, Beyaz Peynir, Siyah/Yeşil Zeytin, Mevsim Sebzeleri Söğüş, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
-        { date: "28.09.2025 Pazar", food: "Menemen, Çikolatalı Milföy Börek, Kaşar Peyniri, Siyah/Yeşil Zeytin, Reçel Çeşitleri, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
-        { date: "29.09.2025 Pazartesi", food: "Patatesli Kalem Böreği, Haşlanmış Yumurta, Beyaz Peynir, Siyah/Yeşil Zeytin, Mevsim Sebzeleri Söğüş, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
-        { date: "30.09.2025 Salı", food: "Sucuklu Yumurta, Sade Açma, Çeçil/Örgü Peyniri, Siyah/Yeşil Zeytin, Reçel Çeşitleri, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" }
-    ],
-    dinner: [
-        { date: "15.09.2025 Pazartesi", food: "Mercimek Çorba / Domates Çorba, Tavuklu Kağıt Kebabı / Zeytinyağlı Taze Fasulye, Şehriyeli Pirinç Pilavı, Ayran, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
-        { date: "16.09.2025 Salı", food: "Ezogelin Çorba / Ayranaşı Çorba, Pideli Soslu Izgara Köfte + Izgara Domates+Biber / Karışık Dolma + Yoğurt Soslu Spagetti, Kuru Fasulye Piyazı, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
-        { date: "17.09.2025 Çarşamba", food: "Mercimek Çorba / Şehriye Çorba, Bahçevan Kebabı / Nohut Yemeği, Bulgur Pilavı, Nektari, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
-        { date: "18.09.2025 Perşembe", food: "Ezogelin Çorba / Düğün Çorba, Tavuk Burger + Patates Kızartması / Mevsim Türlü, Mantı + Yoğurt, Çiğ Köfte + Marul, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
-        { date: "19.09.2025 Cuma", food: "Mercimek Çorba / Tarhana Çorba, İzmir Köfte / Mücver + Yoğurt, Mısırlı Pirinç Pilavı, Çoban Salata, Muzlu Magnolia, 500 ml Su", calory: "1100-1500 kalori" },
-        { date: "20.09.2025 Cumartesi", food: "Ezogelin Çorba / Cennet Çorba, Tavuk Izgara + Elma Dilim Patates / Soslu Karışık Kızartma, Makarna Çeşitleri, Yoğurt, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
-        { date: "21.09.2025 Pazar", food: "Mercimek Çorba / Domates Çorba, Etsiz Kuru Fasulye / Patates Köftesi + Yoğurt, Pirinç Pilavı, Cevizli Baklava, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
-        { date: "22.09.2025 Pazartesi", food: "Ezogelin Çorba / Havuç Çorba, Tirit Kebabı / Bezelye Yemeği, Bulgur Pilavı, Karışık Salata, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
-        { date: "23.09.2025 Salı", food: "Mercimek Çorba / Şehriye Çorba, Tavuk Şinitzel + Elma Dilim Patates / Zeytinyağlı Taze Fasulye, Mantı + Yoğurt, Kısır, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
-        { date: "24.09.2025 Çarşamba", food: "Ezogelin Çorba / Kremalı Tavuk Çorba, Kaşarlı Köfte + Izgara Domates+Biber / Zeytinyağlı Enginar Yemeği, Pirinç Pilavı, Bisküvili Pasta, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
-        { date: "25.09.2025 Perşembe", food: "Mercimek Çorba / Tarhana Çorba, Beşamel Soslu Tavuk / Lahana Sarma + Yoğurt, Fesleğen Soslu Makarna, Havuç Tarator, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
-        { date: "26.09.2025 Cuma", food: "Ezogelin Çorba / Düğün Çorba, Etsiz Kuru Fasulye / Ratatuy, Pirinç Pilavı, Şekerpare, Turşu, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
-        { date: "27.09.2025 Cumartesi", food: "Mercimek Çorba / Yüksük Çorba, Çin Usulü Tavuk / Karışık Sebze Graten, Soslu Spagetti, Üzüm, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
-        { date: "28.09.2025 Pazar", food: "Ezogelin Çorba / Şehriyeli Tavuk Çorba, Karnıyarık / Nohut Yemeği, Pirinç Pilavı, Cacık, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
-        { date: "29.09.2025 Pazartesi", food: "Mercimek Çorba / Domates Çorba, Çıtır Tavuk + Elma Dilim Patates / Soslu Karışık Kızartma, Soslu Makarna, Sütlaç, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
-        { date: "30.09.2025 Salı", food: "Ezogelin Çorba / Yayla Çorba, Hamburger + Patates Kızartması / Mücver + Yoğurt, Cevizli Erişte, Ayran, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" }
-    ]
+const mealData = {
+    istanbul: {
+        breakfast: [
+            { date: "01.10.2025 Çarşamba", food: "Patates Kızartması, Haşlanmış Yumurta, Beyaz Peynir, Siyah/Yeşil Zeytin, Helva, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "02.10.2025 Perşembe", food: "Sade Omlet, Dere Otlu Poğaça, Kaşar Peynir, Siyah/Yeşil Zeytin, Mevsim Sebzeleri Söğüş, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "03.10.2025 Cuma", food: "Karışık Pizza, Haşlanmış Yumurta, Beyaz Peynir, Siyah/Yeşil Zeytin, Tahinli Pekmez, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "04.10.2025 Cumartesi", food: "Sucuklu Yumurta, Sade Açma, Örgü/Çeçil Peynir, Siyah/Yeşil Zeytin, Sürülebilir Çikolata, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "05.10.2025 Pazar", food: "Patates Kızartması, Haşlanmış Yumurta, Beyaz Peynir, Siyah/Yeşil Zeytin, Mevsim Sebzeleri Söğüş, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "06.10.2025 Pazartesi", food: "Menemen, Çikolatalı Milföy Börek, Labne Peynir, Siyah/Yeşil Zeytin, Reçel Çeşitleri, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "07.10.2025 Salı", food: "Sosis Kokteyl (Salçalı veya Kızartma), Haşlanmış Yumurta, Beyaz Peynir, Siyah/Yeşil Zeytin, Mevsim Sebzeleri Söğüş, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "08.10.2025 Çarşamba", food: "Kaşarlı Omlet, Mozaik Kek, Örgü/Çeçil Peynir, Siyah/Yeşil Zeytin, Tahinli Pekmez, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "09.10.2025 Perşembe", food: "Patates Kızartması, Haşlanmış Yumurta, Beyaz Peynir, Siyah/Yeşil Zeytin, Helva, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "10.10.2025 Cuma", food: "Peynirli Omlet, Patates Kroket, Kaşar Peynir, Siyah/Yeşil Zeytin, Sürülebilir Çikolata, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "11.10.2025 Cumartesi", food: "Karışık Pizza, Haşlanmış Yumurta, Beyaz Peynir, Siyah/Yeşil Zeytin, Tahinli Pekmez, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "12.10.2025 Pazar", food: "Sade Omlet, Zeytinli/Peynirli Açma, Kaşar Peynir, Siyah/Yeşil Zeytin, Bal+Tereyağ, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "13.10.2025 Pazartesi", food: "Peynirli Börek, Haşlanmış Yumurta, Krem Peynir, Siyah/Yeşil Zeytin, Mevsim Sebzeleri Söğüş, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "14.10.2025 Salı", food: "Sucuklu Yumurta, Peynirli Milföy Börek, Kaşar Peynir, Siyah/Yeşil Zeytin, Reçel Çeşitleri, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "15.10.2025 Çarşamba", food: "Patates Kızartması, Haşlanmış Yumurta, Beyaz Peynir, Siyah/Yeşil Zeytin, Sürülebilir Çikolata, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "16.10.2025 Perşembe", food: "Sade Omlet, Dere Otlu Poğaça, Örgü/Çeçil Peynir, Siyah/Yeşil Zeytin, Mevsim Sebzeleri Söğüş, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "17.10.2025 Cuma", food: "Karışık Pizza, Haşlanmış Yumurta, Beyaz Peynir, Siyah/Yeşil Zeytin, Tahinli Pekmez, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "18.10.2025 Cumartesi", food: "Menemen, Simit, Kaşar Peynir, Siyah/Yeşil Zeytin, Muz, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "19.10.2025 Pazar", food: "Karışık Kızartma, Haşlanmış Yumurta, Örgü/Çeçil Peynir, Siyah/Yeşil Zeytin, Reçel Çeşitleri, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "20.10.2025 Pazartesi", food: "Sade Omlet, Meyveli Kek, Beyaz Peynir, Siyah/Yeşil Zeytin, Mevsim Sebzeleri Söğüş, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "21.10.2025 Salı", food: "Peynirli Börek, Haşlanmış Yumurta, Krem Peynir, Siyah/Yeşil Zeytin, Mevsim Sebzeleri Söğüş, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "22.10.2025 Çarşamba", food: "Sucuklu Yumurta, Peynirli Milföy Börek, Kaşar Peynir, Siyah/Yeşil Zeytin, Reçel Çeşitleri, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "23.10.2025 Perşembe", food: "Patates Kızartması, Haşlanmış Yumurta, Beyaz Peynir, Siyah/Yeşil Zeytin, Sürülebilir Çikolata, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "24.10.2025 Cuma", food: "Sade Omlet, Dere Otlu Poğaça, Örgü/Çeçil Peynir, Siyah/Yeşil Zeytin, Mevsim Sebzeleri Söğüş, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" }
+        ],
+        dinner: [
+            { date: "01.10.2025 Çarşamba", food: "Mercimek Çorba / Tarhana Çorba, Çiftlik Kebabı / Zeytinyağlı Taze Fasulye, Nohutlu Pirinç Pilavı, Çoban Salata, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "02.10.2025 Perşembe", food: "Ezogelin Çorba / Toyga Çorba, Tavuklu Çökertme Kebabı / Ispanak Yemeği+Yoğurt, Soslu Makarna, Browni, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "03.10.2025 Cuma", food: "Mercimek Çorba / Şehriye Çorba, Nohut Yemeği / Mevsim Türlü, Pirinç Pilavı, Cevizli Kadayıf, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "04.10.2025 Cumartesi", food: "Ezogelin Çorba / Cennet Çorba, Tavuk Külbastı+Elma Dilim Patates / Patates Köftesi+Yoğurt, Spagetti Napoliten, Elma, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "05.10.2025 Pazar", food: "Mercimek Çorba / Domates Çorba, Patlıcan Musakka / Bezelye Yemeği, Bulgur Pilavı, Bahçe Salata, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "06.10.2025 Pazartesi", food: "Ezogelin Çorba / Kremalı Sebze Çorba, Tavuklu Pilav / Karışık Dolma, Soslu Karışık Kızartma, Ayran, Şekerpare, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "07.10.2025 Salı", food: "Mercimek Çorba / Yüksük Çorba, Ekşili Köfte / Mücver+Yoğurt, Soslu Makarna, Çiğ Köfte (Marul+Limon), 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "08.10.2025 Çarşamba", food: "Ezogelin Çorba / Kremalı Tavuk Çorba, Hünkar Beğendi / Barbunya Yemeği, Şehriyeli Pirinç Pilavı, Muzlu Magnolia, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "09.10.2025 Perşembe", food: "Mercimek Çorba / Tarhana Çorba, Çiftlik Kebabı / Zeytinyağlı Taze Fasulye, Nohutlu Pirinç Pilavı, Çoban Salata, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "10.10.2025 Cuma", food: "Ezogelin Çorba / Düğün Çorba, Kuru Fasulye / Karışık Sebze Graten, Pirinç Pilavı, Kıbrıs Tatlısı, Turşu, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "11.10.2025 Cumartesi", food: "Mercimek Çorba / Şehriye Çorba, Pideli Köfte+Domates+Biber / Ispanak Yemeği+Yoğurt, Bulgur Pilavı, Havuç Tarator, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "12.10.2025 Pazar", food: "Ezogelin Çorba / Kremalı Sebze Çorba, Şinitzel+Elma Dilim Patates / Karışık Kızartma, Fesleğen Soslu Makarna, Kuru Cacık, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "13.10.2025 Pazartesi", food: "Mercimek Çorba / Domates Çorba, Bahçevan Kebabı / Nohut Tava, Bulgur Pilavı, Sütlaç, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "14.10.2025 Salı", food: "Ezogelin Çorba / Yayla Çorba, Tavuk Burger / Bezelye Yemeği, Köri Soslu Makarna, Ayran, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "15.10.2025 Çarşamba", food: "Mercimek Çorba / Yüksük Çorba, Karnıyarık / Mevsim Türlü, Şehriyeli Pirinç Pilavı, Gavurdağı Salata, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "16.10.2025 Perşembe", food: "Ezogelin Çorba / Toyga Çorba, Sebzeli Tavuk Kavurma / Karışık Dolma, Spagetti Napoliten, Bisküvili Pasta, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "17.10.2025 Cuma", food: "Mercimek Çorba / Tarhana Çorba, Beyti Kebab+Yoğurt+Sos+Domates+Biber / Zeytinyağlı Taze Fasulye, Bulgur Pilavı, Kaşık Salata, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "18.10.2025 Cumartesi", food: "Ezogelin Çorba / Brokoli Çorba, Çıtır Tavuk+Elma Dilim Patates / Karışık Kızartma, Mantı+Yoğurt+Sos, Mercimek Köftesi+Marul+Limon, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "19.10.2025 Pazar", food: "Mercimek Çorba / Şehriye Çorba, Kuru Fasulye / Karnabahar Kızartması+Yoğurt, Pirinç Pilavı, Cevizli Baklava, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "20.10.2025 Pazartesi", food: "Ezogelin Çorba / Kremalı Sebze Çorba, Şinitzel+Elma Dilim Patates / Karışık Kızartma, Fesleğen Soslu Makarna, Kuru Cacık, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "21.10.2025 Salı", food: "Mercimek Çorba / Domates Çorba, Bahçevan Kebabı / Nohut Tava, Bulgur Pilavı, Sütlaç, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "22.10.2025 Çarşamba", food: "Ezogelin Çorba / Yayla Çorba, Tavuk Burger / Bezelye Yemeği, Köri Soslu Makarna, Ayran, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "23.10.2025 Perşembe", food: "Mercimek Çorba / Yüksük Çorba, Karnıyarık / Mevsim Türlü, Şehriyeli Pirinç Pilavı, Gavurdağı Salata, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "24.10.2025 Cuma", food: "Ezogelin Çorba / Toyga Çorba, Sebzeli Tavuk Kavurma / Karışık Dolma, Spagetti Napoliten, Bisküvili Pasta, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" }
+        ]
+    },
+    ankara: {
+        breakfast: [
+            { date: "01.10.2025 Çarşamba", food: "Patates Kızartması, Haşlanmış Yumurta, Beyaz Peynir, Siyah/Yeşil Zeytin, Helva, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "02.10.2025 Perşembe", food: "Sade Omlet, Dere Otlu Poğaça, Kaşar Peynir, Siyah/Yeşil Zeytin, Mevsim Sebzeleri Söğüş, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "03.10.2025 Cuma", food: "Karışık Pizza, Haşlanmış Yumurta, Beyaz Peynir, Siyah/Yeşil Zeytin, Tahinli Pekmez, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "04.10.2025 Cumartesi", food: "Sucuklu Yumurta, Sade Açma, Örgü/Çeçil Peynir, Siyah/Yeşil Zeytin, Sürülebilir Çikolata, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "05.10.2025 Pazar", food: "Patates Kızartması, Haşlanmış Yumurta, Beyaz Peynir, Siyah/Yeşil Zeytin, Mevsim Sebzeleri Söğüş, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "06.10.2025 Pazartesi", food: "Menemen, Çikolatalı Milföy Börek, Labne Peynir, Siyah/Yeşil Zeytin, Reçel Çeşitleri, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "07.10.2025 Salı", food: "Sosis Kokteyl (Salçalı veya Kızartma), Haşlanmış Yumurta, Beyaz Peynir, Siyah/Yeşil Zeytin, Mevsim Sebzeleri Söğüş, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "08.10.2025 Çarşamba", food: "Kaşarlı Omlet, Mozaik Kek, Örgü/Çeçil Peynir, Siyah/Yeşil Zeytin, Tahinli Pekmez, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "09.10.2025 Perşembe", food: "Patates Kızartması, Haşlanmış Yumurta, Beyaz Peynir, Siyah/Yeşil Zeytin, Helva, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "10.10.2025 Cuma", food: "Peynirli Omlet, Patates Kroket, Kaşar Peynir, Siyah/Yeşil Zeytin, Sürülebilir Çikolata, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "11.10.2025 Cumartesi", food: "Karışık Pizza, Haşlanmış Yumurta, Beyaz Peynir, Siyah/Yeşil Zeytin, Tahinli Pekmez, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "12.10.2025 Pazar", food: "Sade Omlet, Zeytinli/Peynirli Açma, Kaşar Peynir, Siyah/Yeşil Zeytin, Bal+Tereyağ, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "13.10.2025 Pazartesi", food: "Peynirli Börek, Haşlanmış Yumurta, Krem Peynir, Siyah/Yeşil Zeytin, Mevsim Sebzeleri Söğüş, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "14.10.2025 Salı", food: "Sucuklu Yumurta, Peynirli Milföy Börek, Kaşar Peynir, Siyah/Yeşil Zeytin, Reçel Çeşitleri, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "15.10.2025 Çarşamba", food: "Patates Kızartması, Haşlanmış Yumurta, Beyaz Peynir, Siyah/Yeşil Zeytin, Sürülebilir Çikolata, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "16.10.2025 Perşembe", food: "Sade Omlet, Dere Otlu Poğaça, Örgü/Çeçil Peynir, Siyah/Yeşil Zeytin, Mevsim Sebzeleri Söğüş, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "17.10.2025 Cuma", food: "Karışık Pizza, Haşlanmış Yumurta, Beyaz Peynir, Siyah/Yeşil Zeytin, Tahinli Pekmez, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "18.10.2025 Cumartesi", food: "Menemen, Simit, Kaşar Peynir, Siyah/Yeşil Zeytin, Muz, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "19.10.2025 Pazar", food: "Karışık Kızartma, Haşlanmış Yumurta, Örgü/Çeçil Peynir, Siyah/Yeşil Zeytin, Reçel Çeşitleri, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "20.10.2025 Pazartesi", food: "Sade Omlet, Meyveli Kek, Beyaz Peynir, Siyah/Yeşil Zeytin, Mevsim Sebzeleri Söğüş, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "21.10.2025 Salı", food: "Peynirli Börek, Haşlanmış Yumurta, Krem Peynir, Siyah/Yeşil Zeytin, Mevsim Sebzeleri Söğüş, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "22.10.2025 Çarşamba", food: "Sucuklu Yumurta, Peynirli Milföy Börek, Kaşar Peynir, Siyah/Yeşil Zeytin, Reçel Çeşitleri, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "23.10.2025 Perşembe", food: "Patates Kızartması, Haşlanmış Yumurta, Beyaz Peynir, Siyah/Yeşil Zeytin, Sürülebilir Çikolata, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "24.10.2025 Cuma", food: "Sade Omlet, Dere Otlu Poğaça, Örgü/Çeçil Peynir, Siyah/Yeşil Zeytin, Mevsim Sebzeleri Söğüş, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" }
+        ],
+        dinner: [
+            { date: "01.10.2025 Çarşamba", food: "Mercimek Çorba / Tarhana Çorba, Çiftlik Kebabı / Zeytinyağlı Taze Fasulye, Nohutlu Pirinç Pilavı, Çoban Salata, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "02.10.2025 Perşembe", food: "Ezogelin Çorba / Toyga Çorba, Tavuklu Çökertme Kebabı / Ispanak Yemeği+Yoğurt, Soslu Makarna, Browni, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "03.10.2025 Cuma", food: "Mercimek Çorba / Şehriye Çorba, Nohut Yemeği / Mevsim Türlü, Pirinç Pilavı, Cevizli Kadayıf, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "04.10.2025 Cumartesi", food: "Ezogelin Çorba / Cennet Çorba, Tavuk Külbastı+Elma Dilim Patates / Patates Köftesi+Yoğurt, Spagetti Napoliten, Elma, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "05.10.2025 Pazar", food: "Mercimek Çorba / Domates Çorba, Patlıcan Musakka / Bezelye Yemeği, Bulgur Pilavı, Bahçe Salata, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "06.10.2025 Pazartesi", food: "Ezogelin Çorba / Kremalı Sebze Çorba, Tavuklu Pilav / Karışık Dolma, Soslu Karışık Kızartma, Ayran, Şekerpare, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "07.10.2025 Salı", food: "Mercimek Çorba / Yüksük Çorba, Ekşili Köfte / Mücver+Yoğurt, Soslu Makarna, Çiğ Köfte (Marul+Limon), 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "08.10.2025 Çarşamba", food: "Ezogelin Çorba / Kremalı Tavuk Çorba, Hünkar Beğendi / Barbunya Yemeği, Şehriyeli Pirinç Pilavı, Muzlu Magnolia, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "09.10.2025 Perşembe", food: "Mercimek Çorba / Tarhana Çorba, Çiftlik Kebabı / Zeytinyağlı Taze Fasulye, Nohutlu Pirinç Pilavı, Çoban Salata, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "10.10.2025 Cuma", food: "Ezogelin Çorba / Düğün Çorba, Kuru Fasulye / Karışık Sebze Graten, Pirinç Pilavı, Kıbrıs Tatlısı, Turşu, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "11.10.2025 Cumartesi", food: "Mercimek Çorba / Şehriye Çorba, Pideli Köfte+Domates+Biber / Ispanak Yemeği+Yoğurt, Bulgur Pilavı, Havuç Tarator, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "12.10.2025 Pazar", food: "Ezogelin Çorba / Kremalı Sebze Çorba, Şinitzel+Elma Dilim Patates / Karışık Kızartma, Fesleğen Soslu Makarna, Kuru Cacık, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "13.10.2025 Pazartesi", food: "Mercimek Çorba / Domates Çorba, Bahçevan Kebabı / Nohut Tava, Bulgur Pilavı, Sütlaç, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "14.10.2025 Salı", food: "Ezogelin Çorba / Yayla Çorba, Tavuk Burger / Bezelye Yemeği, Köri Soslu Makarna, Ayran, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "15.10.2025 Çarşamba", food: "Mercimek Çorba / Yüksük Çorba, Karnıyarık / Mevsim Türlü, Şehriyeli Pirinç Pilavı, Gavurdağı Salata, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "16.10.2025 Perşembe", food: "Ezogelin Çorba / Toyga Çorba, Sebzeli Tavuk Kavurma / Karışık Dolma, Spagetti Napoliten, Bisküvili Pasta, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "17.10.2025 Cuma", food: "Mercimek Çorba / Tarhana Çorba, Beyti Kebab+Yoğurt+Sos+Domates+Biber / Zeytinyağlı Taze Fasulye, Bulgur Pilavı, Kaşık Salata, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "18.10.2025 Cumartesi", food: "Ezogelin Çorba / Brokoli Çorba, Çıtır Tavuk+Elma Dilim Patates / Karışık Kızartma, Mantı+Yoğurt+Sos, Mercimek Köftesi+Marul+Limon, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "19.10.2025 Pazar", food: "Mercimek Çorba / Şehriye Çorba, Kuru Fasulye / Karnabahar Kızartması+Yoğurt, Pirinç Pilavı, Cevizli Baklava, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "20.10.2025 Pazartesi", food: "Ezogelin Çorba / Kremalı Sebze Çorba, Şinitzel+Elma Dilim Patates / Karışık Kızartma, Fesleğen Soslu Makarna, Kuru Cacık, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "21.10.2025 Salı", food: "Mercimek Çorba / Domates Çorba, Bahçevan Kebabı / Nohut Tava, Bulgur Pilavı, Sütlaç, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "22.10.2025 Çarşamba", food: "Ezogelin Çorba / Yayla Çorba, Tavuk Burger / Bezelye Yemeği, Köri Soslu Makarna, Ayran, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "23.10.2025 Perşembe", food: "Mercimek Çorba / Yüksük Çorba, Karnıyarık / Mevsim Türlü, Şehriyeli Pirinç Pilavı, Gavurdağı Salata, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "24.10.2025 Cuma", food: "Ezogelin Çorba / Toyga Çorba, Sebzeli Tavuk Kavurma / Karışık Dolma, Spagetti Napoliten, Bisküvili Pasta, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" }
+        ]
+    },
+    izmir: {
+        breakfast: [
+            { date: "01.10.2025 Çarşamba", food: "Patates Kızartması, Haşlanmış Yumurta, Beyaz Peynir, Siyah/Yeşil Zeytin, Helva, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "02.10.2025 Perşembe", food: "Sade Omlet, Dere Otlu Poğaça, Kaşar Peynir, Siyah/Yeşil Zeytin, Mevsim Sebzeleri Söğüş, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "03.10.2025 Cuma", food: "Karışık Pizza, Haşlanmış Yumurta, Beyaz Peynir, Siyah/Yeşil Zeytin, Tahinli Pekmez, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "04.10.2025 Cumartesi", food: "Sucuklu Yumurta, Sade Açma, Örgü/Çeçil Peynir, Siyah/Yeşil Zeytin, Sürülebilir Çikolata, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "05.10.2025 Pazar", food: "Patates Kızartması, Haşlanmış Yumurta, Beyaz Peynir, Siyah/Yeşil Zeytin, Mevsim Sebzeleri Söğüş, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "06.10.2025 Pazartesi", food: "Menemen, Çikolatalı Milföy Börek, Labne Peynir, Siyah/Yeşil Zeytin, Reçel Çeşitleri, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "07.10.2025 Salı", food: "Sosis Kokteyl (Salçalı veya Kızartma), Haşlanmış Yumurta, Beyaz Peynir, Siyah/Yeşil Zeytin, Mevsim Sebzeleri Söğüş, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "08.10.2025 Çarşamba", food: "Kaşarlı Omlet, Mozaik Kek, Örgü/Çeçil Peynir, Siyah/Yeşil Zeytin, Tahinli Pekmez, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "09.10.2025 Perşembe", food: "Patates Kızartması, Haşlanmış Yumurta, Beyaz Peynir, Siyah/Yeşil Zeytin, Helva, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "10.10.2025 Cuma", food: "Peynirli Omlet, Patates Kroket, Kaşar Peynir, Siyah/Yeşil Zeytin, Sürülebilir Çikolata, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "11.10.2025 Cumartesi", food: "Karışık Pizza, Haşlanmış Yumurta, Beyaz Peynir, Siyah/Yeşil Zeytin, Tahinli Pekmez, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "12.10.2025 Pazar", food: "Sade Omlet, Zeytinli/Peynirli Açma, Kaşar Peynir, Siyah/Yeşil Zeytin, Bal+Tereyağ, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "13.10.2025 Pazartesi", food: "Peynirli Börek, Haşlanmış Yumurta, Krem Peynir, Siyah/Yeşil Zeytin, Mevsim Sebzeleri Söğüş, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "14.10.2025 Salı", food: "Sucuklu Yumurta, Peynirli Milföy Börek, Kaşar Peynir, Siyah/Yeşil Zeytin, Reçel Çeşitleri, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "15.10.2025 Çarşamba", food: "Patates Kızartması, Haşlanmış Yumurta, Beyaz Peynir, Siyah/Yeşil Zeytin, Sürülebilir Çikolata, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "16.10.2025 Perşembe", food: "Sade Omlet, Dere Otlu Poğaça, Örgü/Çeçil Peynir, Siyah/Yeşil Zeytin, Mevsim Sebzeleri Söğüş, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "17.10.2025 Cuma", food: "Karışık Pizza, Haşlanmış Yumurta, Beyaz Peynir, Siyah/Yeşil Zeytin, Tahinli Pekmez, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "18.10.2025 Cumartesi", food: "Menemen, Simit, Kaşar Peynir, Siyah/Yeşil Zeytin, Muz, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "19.10.2025 Pazar", food: "Karışık Kızartma, Haşlanmış Yumurta, Örgü/Çeçil Peynir, Siyah/Yeşil Zeytin, Reçel Çeşitleri, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "20.10.2025 Pazartesi", food: "Sade Omlet, Meyveli Kek, Beyaz Peynir, Siyah/Yeşil Zeytin, Mevsim Sebzeleri Söğüş, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "21.10.2025 Salı", food: "Peynirli Börek, Haşlanmış Yumurta, Krem Peynir, Siyah/Yeşil Zeytin, Mevsim Sebzeleri Söğüş, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "22.10.2025 Çarşamba", food: "Sucuklu Yumurta, Peynirli Milföy Börek, Kaşar Peynir, Siyah/Yeşil Zeytin, Reçel Çeşitleri, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "23.10.2025 Perşembe", food: "Patates Kızartması, Haşlanmış Yumurta, Beyaz Peynir, Siyah/Yeşil Zeytin, Sürülebilir Çikolata, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" },
+            { date: "24.10.2025 Cuma", food: "Sade Omlet, Dere Otlu Poğaça, Örgü/Çeçil Peynir, Siyah/Yeşil Zeytin, Mevsim Sebzeleri Söğüş, 500 ml Su, Çeyrek Ekmek", calory: "650-850 kalori" }
+        ],
+        dinner: [
+            { date: "01.10.2025 Çarşamba", food: "Mercimek Çorba / Tarhana Çorba, Çiftlik Kebabı / Zeytinyağlı Taze Fasulye, Nohutlu Pirinç Pilavı, Çoban Salata, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "02.10.2025 Perşembe", food: "Ezogelin Çorba / Toyga Çorba, Tavuklu Çökertme Kebabı / Ispanak Yemeği+Yoğurt, Soslu Makarna, Browni, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "03.10.2025 Cuma", food: "Mercimek Çorba / Şehriye Çorba, Nohut Yemeği / Mevsim Türlü, Pirinç Pilavı, Cevizli Kadayıf, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "04.10.2025 Cumartesi", food: "Ezogelin Çorba / Cennet Çorba, Tavuk Külbastı+Elma Dilim Patates / Patates Köftesi+Yoğurt, Spagetti Napoliten, Elma, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "05.10.2025 Pazar", food: "Mercimek Çorba / Domates Çorba, Patlıcan Musakka / Bezelye Yemeği, Bulgur Pilavı, Bahçe Salata, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "06.10.2025 Pazartesi", food: "Ezogelin Çorba / Kremalı Sebze Çorba, Tavuklu Pilav / Karışık Dolma, Soslu Karışık Kızartma, Ayran, Şekerpare, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "07.10.2025 Salı", food: "Mercimek Çorba / Yüksük Çorba, Ekşili Köfte / Mücver+Yoğurt, Soslu Makarna, Çiğ Köfte (Marul+Limon), 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "08.10.2025 Çarşamba", food: "Ezogelin Çorba / Kremalı Tavuk Çorba, Hünkar Beğendi / Barbunya Yemeği, Şehriyeli Pirinç Pilavı, Muzlu Magnolia, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "09.10.2025 Perşembe", food: "Mercimek Çorba / Tarhana Çorba, Çiftlik Kebabı / Zeytinyağlı Taze Fasulye, Nohutlu Pirinç Pilavı, Çoban Salata, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "10.10.2025 Cuma", food: "Ezogelin Çorba / Düğün Çorba, Kuru Fasulye / Karışık Sebze Graten, Pirinç Pilavı, Kıbrıs Tatlısı, Turşu, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "11.10.2025 Cumartesi", food: "Mercimek Çorba / Şehriye Çorba, Pideli Köfte+Domates+Biber / Ispanak Yemeği+Yoğurt, Bulgur Pilavı, Havuç Tarator, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "12.10.2025 Pazar", food: "Ezogelin Çorba / Kremalı Sebze Çorba, Şinitzel+Elma Dilim Patates / Karışık Kızartma, Fesleğen Soslu Makarna, Kuru Cacık, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "13.10.2025 Pazartesi", food: "Mercimek Çorba / Domates Çorba, Bahçevan Kebabı / Nohut Tava, Bulgur Pilavı, Sütlaç, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "14.10.2025 Salı", food: "Ezogelin Çorba / Yayla Çorba, Tavuk Burger / Bezelye Yemeği, Köri Soslu Makarna, Ayran, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "15.10.2025 Çarşamba", food: "Mercimek Çorba / Yüksük Çorba, Karnıyarık / Mevsim Türlü, Şehriyeli Pirinç Pilavı, Gavurdağı Salata, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "16.10.2025 Perşembe", food: "Ezogelin Çorba / Toyga Çorba, Sebzeli Tavuk Kavurma / Karışık Dolma, Spagetti Napoliten, Bisküvili Pasta, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "17.10.2025 Cuma", food: "Mercimek Çorba / Tarhana Çorba, Beyti Kebab+Yoğurt+Sos+Domates+Biber / Zeytinyağlı Taze Fasulye, Bulgur Pilavı, Kaşık Salata, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "18.10.2025 Cumartesi", food: "Ezogelin Çorba / Brokoli Çorba, Çıtır Tavuk+Elma Dilim Patates / Karışık Kızartma, Mantı+Yoğurt+Sos, Mercimek Köftesi+Marul+Limon, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "19.10.2025 Pazar", food: "Mercimek Çorba / Şehriye Çorba, Kuru Fasulye / Karnabahar Kızartması+Yoğurt, Pirinç Pilavı, Cevizli Baklava, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "20.10.2025 Pazartesi", food: "Ezogelin Çorba / Kremalı Sebze Çorba, Şinitzel+Elma Dilim Patates / Karışık Kızartma, Fesleğen Soslu Makarna, Kuru Cacık, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "21.10.2025 Salı", food: "Mercimek Çorba / Domates Çorba, Bahçevan Kebabı / Nohut Tava, Bulgur Pilavı, Sütlaç, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "22.10.2025 Çarşamba", food: "Ezogelin Çorba / Yayla Çorba, Tavuk Burger / Bezelye Yemeği, Köri Soslu Makarna, Ayran, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "23.10.2025 Perşembe", food: "Mercimek Çorba / Yüksük Çorba, Karnıyarık / Mevsim Türlü, Şehriyeli Pirinç Pilavı, Gavurdağı Salata, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" },
+            { date: "24.10.2025 Cuma", food: "Ezogelin Çorba / Toyga Çorba, Sebzeli Tavuk Kavurma / Karışık Dolma, Spagetti Napoliten, Bisküvili Pasta, 500 ml Su, Çeyrek Ekmek", calory: "1100-1500 kalori" }
+        ]
+    }
 };
 
-let mainContainer = document.getElementById("container");
+const mainContainer = document.getElementById("container");
+const mealToggle = document.getElementById("mealToggle");
+const citySelection = document.getElementById("citySelection");
 
-function renderGrid(selectedMeal) {
+function renderGrid() {
+    const selectedCity = citySelection.value;
+    const selectedMealType = mealToggle.checked ? "dinner" : "breakfast";
+    
+    const containerData = mealData[selectedCity][selectedMealType];
+
     mainContainer.innerHTML = "";
-    let grid = document.createElement("div");
-    grid.style.display = "grid";
-    grid.style.justifyContent = "center";
-
-    if (window.innerWidth <= 1080) {
-        grid.style.gridTemplateColumns = "repeat(1, auto)";
-    } else {
-        grid.style.gridTemplateColumns = "repeat(3, auto)";
+    if (!containerData || containerData.length === 0) {
+        mainContainer.innerHTML = "<p>Bu seçim için gösterilecek menü bulunmamaktadır.</p>";
+        return;
     }
 
-    grid.style.gap = "20px";
+    let grid = document.createElement("div");
+    grid.className = "meal-grid";
 
-    let container = meals[selectedMeal];
-    
-    let todayStr = new Date().toLocaleDateString("tr-TR", {
-        day: "2-digit",
-        month: "2-digit",
-        year: "numeric",
-    }); 
-
-    for (let i = 0; i < container.length; i++) {
-        let item = container[i];
-
+    for (let i = 0; i < containerData.length; i++) {
+        let item = containerData[i];
         let dayBox = document.createElement("div");
-        dayBox.style.display = "flex";
-        dayBox.style.flexDirection = "column";
-        dayBox.style.alignItems = "center";
-        dayBox.style.textAlign = "center";
-        dayBox.style.padding = "10px";
+        dayBox.className = "day-box";
 
-        let dateDiv = document.createElement("div");
-        dateDiv.id = "date";
-        dateDiv.innerHTML = `<p id="date-cnt">${item.date}</p>`;
+        const dateDiv = document.createElement("div");
+        dateDiv.className = "date";
+        dateDiv.innerHTML = `<p class="date-cnt">${item.date}</p>`;
 
-        let foodDiv = document.createElement("div");
-        foodDiv.id = "food";
-        foodDiv.innerHTML = `<p id="food-cnt">${item.food.replace(/, /g, "<br><br>")}</p>`;
+        const foodDiv = document.createElement("div");
+        foodDiv.className = "food";
+        foodDiv.innerHTML = `<p class="food-cnt">${item.food.replace(/, /g, "<br><br>")}</p>`;
 
-        let calDiv = document.createElement("div");
-        calDiv.id = "calory";
-        calDiv.innerHTML = `<p id="calory-cnt">${item.calory}</p>`;
+        const calDiv = document.createElement("div");
+        calDiv.className = "calory";
+        calDiv.innerHTML = `<p class="calory-cnt">${item.calory}</p>`;
 
-        dayBox.appendChild(dateDiv);
-        dayBox.appendChild(foodDiv);
-        dayBox.appendChild(calDiv);
-
-        grid.appendChild(dayBox);
-
-        if (selectedMeal === "breakfast") {
-            dateDiv.style.backgroundColor = "#FFFBEB";
-            calDiv.style.backgroundColor = "#FFFBEB"; 
-        } else {
-            dateDiv.style.backgroundColor = "#EFF6FF";
-            calDiv.style.backgroundColor = "#EFF6FF";
+        if (selectedMealType === 'dinner') {
+            dayBox.classList.add('dinner-theme');
         }
 
+        dayBox.innerHTML = `
+            ${dateDiv.outerHTML}
+            ${foodDiv.outerHTML}
+            ${calDiv.outerHTML}
+        `;
+        
+        let todayStr = new Date().toLocaleDateString("tr-TR", { day: "2-digit", month: "2-digit", year: "numeric" });
         if (item.date.startsWith(todayStr)) {
             dayBox.classList.add("today");
         }
+        grid.appendChild(dayBox);
     }
-
+    
     mainContainer.appendChild(grid);
+    updateGridColumns();
 }
-renderGrid("breakfast");
 
-const toggle = document.querySelector(".mealToggle");
-
-toggle.addEventListener("change", () => {
-    if(toggle.checked){
-        renderGrid("dinner");
-    } else {
-        renderGrid("breakfast");
+function updateGridColumns() {
+    const grid = document.querySelector('.meal-grid');
+    if (grid) {
+        if (window.innerWidth <= 1080) {
+            grid.style.gridTemplateColumns = "repeat(1, auto)";
+        } else {
+            grid.style.gridTemplateColumns = "repeat(3, auto)";
+        }
     }
-});
+}
+
+mealToggle.addEventListener("change", renderGrid);
+citySelection.addEventListener("change", renderGrid);
+window.addEventListener('resize', updateGridColumns);
+document.addEventListener("DOMContentLoaded", renderGrid);
