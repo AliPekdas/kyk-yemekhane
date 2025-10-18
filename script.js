@@ -235,3 +235,4 @@ mealToggle.addEventListener("change", renderGrid);
 citySelection.addEventListener("change", renderGrid);
 window.addEventListener('resize', updateGridColumns);
 document.addEventListener("DOMContentLoaded", renderGrid);
+
