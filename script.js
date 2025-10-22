@@ -170,6 +170,9 @@ const citySelection = document.getElementById("citySelection");
 function renderGrid() {
     const selectedCity = citySelection.value;
     const selectedMealType = mealToggle.checked ? "dinner" : "breakfast";
+
+    localStorage.setItem('selectedCity', selectedCity);
+    localStorage.setItem('selectedMealType', selectedMealType);
     
     const containerData = mealData[selectedCity][selectedMealType];
 
@@ -231,8 +234,23 @@ function updateGridColumns() {
     }
 }
 
+function loadPreferences() {
+    const savedCity = localStorage.getItem('selectedCity');
+    const savedMealType = localStorage.getItem('selectedMealType');
+
+    if (savedCity) {
+        citySelection.value = savedCity;
+    }
+
+    if (savedMealType) {
+        mealToggle.checked = savedMealType === 'dinner';
+    }
+}
+
 mealToggle.addEventListener("change", renderGrid);
 citySelection.addEventListener("change", renderGrid);
 window.addEventListener('resize', updateGridColumns);
-document.addEventListener("DOMContentLoaded", renderGrid);
-
+document.addEventListener("DOMContentLoaded", () => {
+    loadPreferences();
+    renderGrid();
+});
